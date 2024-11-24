@@ -1,0 +1,78 @@
+.articleCover-container {
+    width: 40vw;
+    height: 100vh;
+    // background-color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    box-sizing: border-box;
+    border-bottom: gray 1px dashed;
+    .avatar-container {
+        width: 20vw;
+        height: 20vw;
+
+        .avatar-item {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .time-container {
+        // background-color: red;
+        color: rgb(148, 4, 4);
+        height: 300px;
+        width: 30vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .time-top-item{
+            border-color: red;
+            color: rgb(139, 2, 2);
+            font-size: 1.4rem;
+            font-family: 'FiraCode';
+            font-weight: 600;
+        }
+        .time-content-container{
+            color: rgb(146, 2, 2);
+            font-size: 1.7rem;
+            letter-spacing: 7px;
+        }
+        .time-bottom-item{
+            border-color: red;
+            // border-style: red 3px solid;
+            font-size: 1.7rem;
+            font-weight: 1000;
+        }
+        .time-content-detail-container{
+            font-size: 1.3rem;
+            width: 20vw;
+            overflow: hidden;
+            text-align: center;
+        }
+    }
+
+    @keyframes mark-animation {
+        0% {
+            // transform: translateY(20px);
+        }
+
+        50% {
+            // transform: translateY(5px);
+        }
+
+        100% {
+            transform: translateY(20px);
+        }
+    }
+
+    .mark-container {
+        background-color: aqua;
+        height: 50px;
+        width: 50px;
+        animation: mark-animation 0.6s infinite alternate ease-in-out;
+    }
+}

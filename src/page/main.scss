@@ -1,0 +1,93 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.page-main-container {
+    width: 98vw;
+    height: 100vh;
+
+    overflow: hidden;
+    // background-color: gray;
+    .map-container {
+        transition: all 0.5s ease-in-out;
+        width: 60vw;
+        position:fixed;
+        z-index: 0;
+        left: 0;
+        top: 0;
+    }
+
+    .article-container {
+        transition: all 0.5s ease-in-out;
+        width: 40vw;
+        min-height: 100vh;
+        position: absolute;
+        right: 0;
+        // background-color: pink;
+        z-index: 999;
+        box-shadow: 0 0 20px gray;
+        // border-left: gray 1px solid;
+        overflow-y: hidden;
+        background-color: white;
+        // overflow-x: hidden;
+        // &::-webkit-scrollbar {
+        //     width: 8px;
+        // }
+
+        // &::-webkit-scrollbar-thumb {
+        //     background-color: #888;
+        //     border-radius: 4px;
+        // }
+
+        // &::-webkit-scrollbar-thumb:hover {
+        //     background-color: #555;
+        // }
+
+        // &::-webkit-scrollbar-track {
+        //     background-color: #f0f0f0;
+        // }
+    }
+    .affix-container{
+        transition: all 0.3s ease-in-out;
+        position: fixed;
+        z-index: 999;
+        right: 20px;
+        bottom: 20px;
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        background-color: gray;
+        cursor: pointer;
+
+        &.hidden{
+            transform: translateY(30vh);
+            opacity: 0;
+        }
+        &.show{
+            opacity: 1;
+        }
+    }
+    .affix-container:hover{
+        background-color: rgba(0, 0, 0, 0.733);
+        box-shadow: 0 0 30px white;
+    }
+
+
+    &.hidden{
+        .map-container{
+            // transform: translateX(-60vw);
+
+        }
+        .article-container{
+            // transform: translateX(40vw);
+            opacity: 0;
+            transform: translateY(100vh);
+        }
+    }
+    &.show{
+        .article-container{
+            opacity: 1;
+        }
+    }
+}
