@@ -68,28 +68,28 @@ const Main = () => {
         // message.success("当前页面索引:", storeCurrentPageIndex)
         if (storeCurrentPageIndex == -1) {
             dispatch(setCurrentState({
-                animationsIndex: 0,
+                animationsIndex: storeCurrentPageIndex,
                 center: [100, 40],
                 pitch: 0,
                 zoom: 3
             }))
         } else if (storeCurrentPageIndex == 0) {
             dispatch(setCurrentState({
-                animationsIndex: 0,
+                animationsIndex: storeCurrentPageIndex,
                 center: [100, 40],
-                pitch: 0,
-                zoom: 3
+                pitch: 45,
+                zoom: 8
             }))
         } else if (storeCurrentPageIndex == 1) {
             dispatch(setCurrentState({
-                animationsIndex: 0,
+                animationsIndex: storeCurrentPageIndex,
                 center: [110, 45],
                 pitch: 45,
                 zoom: 8
             }))
         } else if (storeCurrentPageIndex == 2) {
             dispatch(setCurrentState({
-                animationsIndex: 0,
+                animationsIndex: storeCurrentPageIndex,
                 center: [116, 50],
                 pitch: 0,
                 zoom: 10
@@ -97,7 +97,7 @@ const Main = () => {
         } else if (storeCurrentPageIndex == 3) {
 
             dispatch(setCurrentState({
-                animationsIndex: 0,
+                animationsIndex: storeCurrentPageIndex,
                 center: [126, 40],
                 pitch: 0,
                 zoom: 10
